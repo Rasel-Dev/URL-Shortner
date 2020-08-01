@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+	background-color: #ddd9;
+}
+header{
+	position: fixed;
+	top:0;
+	width:100%;
+	background-color:#fff;
+	padding:10px;
+	box-shadow: 0px 2px 4px 0px rgba(180, 180, 180, 0.5);
+}
+.container{
+	width: 1150px;
+	margin:0 auto;
+}
+.container .header-content, .header-logo, .header-link{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.container .header-content a{
+	text-decoration: none;
+	color:green;
+	font-family: sans-serif;
+}
+.top-20{
+	margin-top:120px;
+}
+.main-body{
+	height: 100%;
+	padding:10px;
+	background-color:;
+	border-radius:5px;
+	overflow: hidden;
+}
+.main-body .bx-flex{
+	display: flex;
+}
+.main-body .bx-flex .left-section{
+	width: 400px;
+	height: 400px;
+	margin-right: 50px;
+}
+.main-body .shortener-form{
+	padding:10px;
+	font-family: sans-serif;
+	background-color: #fff;
+	border-radius: 5px;
+	margin-bottom:50px;
+	box-shadow: 0px 2px 4px 0px rgba(180, 180, 180, 0.5);
+}
+.main-body .shortener-form h2{
+	margin-bottom:10px;
+	text-align: center;
+	color:orange;
+}
+.main-body .shortener-form form{
+	width: 600px;
+	margin:0 auto;
+	display: flex;
+	background-color: green;
+	border:2px solid green;
+	border-radius: 100px;
+	overflow: hidden;
+}
+.main-body .shortener-form form input[type=text]{
+	width: 100%;
+	padding:10px 10px 10px 15px;
+	font-size:14px;
+	border:none;
+	outline:none;
+	color:#808080;
+}
+.main-body .shortener-form form input[type=submit]{
+	width: 140px;
+	padding:10px;
+	font-size:19px;
+	border:none;
+	outline:none;
+	background-color:green;
+	color: #fff;
+	cursor: pointer;
+}
+.main-body .shortener-form .shortener-data{
+	width: 600px;
+	margin:20px auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #ddd9;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.main-body .shortener-form .shortener-data p{
+	display: flex;
+	align-items: center;
+}
+.main-body .shortener-form .shortener-data a{
+	text-decoration: none;
+	color:#000;
+	font-size: 14px
+}
+.main-body .shortener-form .shortener-data button{
+	width:50px;
+	height: 30px;
+	border:none;
+	outline:none;
+	cursor: pointer;
+	background-color:green;
+	color:#fff;
+	font-size: 14px;
+}
+.main-body .bx-flex .ads{
+	width: 100%;
+}
+.main-body .bx-flex .right-section {
+	width: 100%;
+}
+.main-body .bx-flex .right-section .bottom-section{
+	margin-top:10px;
+}
+/*modal*/
+.modal {
+  	display: none; /* Hidden by default */
+  	position: fixed; /* Stay in place */
+  	z-index: 1; /* Sit on top */
+  	left: 0;
+  	top: 0;
+  	width: 100%; /* Full width */
+  	height: 100%; /* Full height */
+  	overflow: auto; /* Enable scroll if needed */
+  	background-color: rgb(0,0,0); /* Fallback color */
+  	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  	-webkit-animation-name: fadeIn; /* Fade in the background */
+  	-webkit-animation-duration: 0.4s;
+  	animation-name: fadeIn;
+  	animation-duration: 0.4s;
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 20%;
+  left:50%;
+  transform: translate(-50%, -20%);
+  background-color: #fefefe;
+  width: 500px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 10px 16px;}
+
+.modal-body form .input_fld{
+	width:300px;
+	display: block;
+	padding:10px 15px;
+	border:none;
+	outline: none;
+	box-shadow: 0px 2px 4px 0px rgba(180, 180, 180, 0.5);
+	margin-bottom:10px;
+}
+.modal-body form button{
+	width: 100px;
+	padding:10px;
+	border:none;
+	outline:none;
+	color:#fff;
+	background-color:#5cb85c;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 20%; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 20%; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}

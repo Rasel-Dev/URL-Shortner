@@ -1,0 +1,27 @@
+
+# X-XSS-Protection
+<IfModule mod_headers.c>
+	Header set X-XSS-Protection "1; mode=block"
+	Header set Strict-Transport-Security "max-age=31536000"
+	Header set X-Content-Type-Options nosniff
+	Header always append X-Frame-Options SAMEORIGIN
+</IfModule>
+
+RewriteEngine on
+
+# RewriteBase /
+# RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Remove Php Extension
+# RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
+
+# Return 404 if original request is /foo/bar.php
+# RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+# RewriteRule .* - [L,R=404]
+
+# create fake file name
+# RewriteRule ^x content.php [NC,L]
+
+# create fake file with arg
+# RewriteRule ^srt/([0-9a-zA-Z]+) a.php?k=$1 [NC,L]
